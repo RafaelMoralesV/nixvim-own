@@ -1,5 +1,5 @@
 {
-  programs.nixvim.plugins.startify = {
+  plugins.startify = {
     enable = true;
 
     settings = {

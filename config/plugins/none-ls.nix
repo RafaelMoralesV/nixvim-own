@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  programs.nixvim.plugins.none-ls = {
+  plugins.none-ls = {
     enable = true;
 
     sources.formatting = {

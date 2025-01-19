@@ -1,5 +1,5 @@
 {
-  programs.nixvim.plugins.comment = {
+  plugins.comment = {
     enable = true;
 
     settings = {

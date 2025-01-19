@@ -1,1 +1,1 @@
-{ programs.nixvim.plugins.emmet = { enable = true; }; }
+{ plugins.emmet.enable = true; }
