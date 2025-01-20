@@ -8,5 +8,15 @@
     ./plugins
   ];
 
-  config = { };
+  config = {
+    # Install Man-pages
+    enableMan = true;
+
+    viAlias = true;
+    vimAlias = true;
+
+    # Highlight and remove extra white spaces
+    highlight.ExtraWhitespace.bg = "red";
+    match.ExtraWhitespace = "\\s\\+$";
+  };
 }

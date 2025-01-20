@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ lib, ... }:
 let
   intoKeymapObject = obj: {
     key = builtins.elemAt (builtins.attrNames obj) 0;

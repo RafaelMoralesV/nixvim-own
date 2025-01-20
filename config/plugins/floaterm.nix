@@ -8,7 +8,7 @@
 
       title = "";
 
-      keymaps.toggle = "<F7>";
+      keymap_toggle = "<F7>";
     };
   };
 }
