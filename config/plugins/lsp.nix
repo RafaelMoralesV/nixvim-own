@@ -26,20 +26,32 @@
       };
 
       servers = {
+        # For C and C++
         clangd.enable = true;
+
+        # For LUA
         lua_ls.enable = true;
+
+        # For LaTeX
         texlab.enable = true;
-        nil_ls.enable = true;
+
+        # For Nix
+        nixd.enable = true;
+
+        # For GOlang
         gopls.enable = true;
+
+        # For PHP
         phpactor = {
           enable = true;
           filetypes = [ "php" "phtml" "blade" ];
         };
 
+        # For Rust
         rust_analyzer = {
           enable = true;
-          installCargo = false;
-          installRustc = false;
+          installCargo = true;
+          installRustc = true;
         };
       };
     };
