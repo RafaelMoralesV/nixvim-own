@@ -41,6 +41,9 @@
         # For GOlang
         gopls.enable = true;
 
+        # For Dart and Flutter
+        dartls.enable = true;
+
         # For PHP
         phpactor = {
           enable = true;
