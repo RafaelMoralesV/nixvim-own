@@ -14,10 +14,10 @@
   };
 
   # NOTE: Opt-in with 0.11
-  diagnostics = {
-    virtual_text = true;
-    virtual_lines = true;
-  };
+  # diagnostics = {
+  #   virtual_text = true;
+  #   virtual_lines = true;
+  # };
 
   opts = {
     updatetime = 100; # Faster completion
