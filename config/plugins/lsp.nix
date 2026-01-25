@@ -9,6 +9,7 @@
 
     lsp = {
       enable = true;
+
       keymaps = {
         silent = true;
         diagnostic = {

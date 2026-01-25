@@ -13,11 +13,10 @@
     providers.wl-copy.enable = true;
   };
 
-  # NOTE: Opt-in with 0.11
-  # diagnostics = {
-  #   virtual_text = true;
-  #   virtual_lines = true;
-  # };
+  diagnostic.settings = {
+    virtual_text = false;
+    virtual_lines.only_current_line = true;
+  };
 
   opts = {
     updatetime = 100; # Faster completion
