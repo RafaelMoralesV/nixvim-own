@@ -11,12 +11,18 @@
     };
   };
 
-  outputs = { nixvim, flake-parts, ... }@inputs:
+  outputs =
+    { nixvim, flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
-      systems =
-        [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
 
-      perSystem = { system, ... }:
+      perSystem =
+        { system, ... }:
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
@@ -31,11 +37,11 @@
 
           # Package.
           nvim = nixvim'.makeNixvimWithModule nixvimModule;
-        in {
+        in
+        {
           checks = {
             # Run `nix flake check .` to verify that your config is not broken
-            default =
-              nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+            default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
           };
 
           packages = {

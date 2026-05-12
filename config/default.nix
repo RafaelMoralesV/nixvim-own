@@ -1,4 +1,5 @@
-{ inputs, ... }: {
+{ inputs, pkgs, ... }:
+{
   imports = [
     #inputs.nixvim.homeManagerModules.nixvim
     ./options.nix
@@ -9,6 +10,8 @@
   ];
 
   config = {
+    nixpkgs.config.allowUnfree = true;
+
     # Install Man-pages
     enableMan = true;
 
